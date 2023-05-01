@@ -1,0 +1,24 @@
+AuthName "access"
+AuthType "basic"
+AuthUserFile /home/c2111727/public_html/knock/.passwd
+Require valid-user
+
+# Enable cache control headers
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  # Set cache control headers for specific file types
+  ExpiresByType image/jpeg "access plus 1 day"
+  ExpiresByType image/png "access plus 1 day"
+  ExpiresByType text/css "access plus 1 day"
+  ExpiresByType text/javascript "access plus 1 day"
+  ExpiresByType application/javascript "access plus 1 day"
+  ExpiresByType application/x-javascript "access plus 1 day"
+
+  # Set cache control headers to expire at 1am each day
+  ExpiresDefault "access plus 1 day"
+  <IfModule mod_headers.c>
+    Header set Expires "Tue, 28 Feb 2023 01:00:00 GMT"
+    Header set Cache-Control "public, max-age=86400, must-revalidate"
+  </IfModule>
+</IfModule>
