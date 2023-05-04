@@ -11,27 +11,14 @@ function popupOptions(){
    btn0.innerText = "Presentation";
    btn0.addEventListener("click", function(){
        //add here the action that you want
-       window.open("./Recursos externos/presentation/Uncaged.pdf", "_blank", "noopener", "_blank", "noopener");
+       window.open("./Recursos externos/presentation/Conair.pdf", "_blank", "noopener", "_blank", "noopener");
    });
-   var btn1 = document.createElement("button");
-   btn1.innerText = "ALL product's FAQs";
-   btn1.addEventListener("click", function(){
-       //add here the action that you want
-       window.open("https://uncagedergonomics.com/pages/faq", "_blank", "noopener");
-   });
-   var btn2 = document.createElement("button");
-   btn2.innerText = "ALL product's Manuals";
-   btn2.addEventListener("click", function(){
-       //add here the action that you want
-       window.open("https://uncagedergonomics.com/pages/product-info", "_blank", "noopener");
-   });
+   
    
 
    // Append the button to the div
    popup.appendChild(btn0);
-   popup.appendChild(btn1);
-   popup.appendChild(btn2);
-   
+
 
    // Append the div to the body
    document.body.appendChild(popup);

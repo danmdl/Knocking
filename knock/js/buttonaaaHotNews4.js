@@ -12,22 +12,10 @@ var btn0 = document.createElement("button");
    btn0.innerText = "Presentation";
    btn0.addEventListener("click", function(){
        //add here the action that you want
-       window.open("./Recursos externos/presentation/Sunday.pdf", "_blank", "noopener");
+       window.open("./Recursos externos/presentation/ThulaTula.pdf", "_blank", "noopener");
    });
 
-   var btn1 = document.createElement("button");
-   btn1.innerText = "How To Video";
-   btn1.addEventListener("click", function(){
-       //add here the action that you want
-       window.open("https://www.youtube.com/watch?v=DoUqblCB_Wk", "_blank", "noopener");
-   });
-
-   var btn2 = document.createElement("button");
-   btn2.innerText = "Ingredients";
-   btn2.addEventListener("click", function(){
-       //add here the action that you want
-       window.open("https://www.getsunday.com/our-ingredients", "_blank", "noopener");
-   });
+   
 
   
    
@@ -35,8 +23,7 @@ var btn0 = document.createElement("button");
   
    // Append the button to the div
    popup.appendChild(btn0);
-   popup.appendChild(btn1);
-   popup.appendChild(btn2);
+   
    
 
    

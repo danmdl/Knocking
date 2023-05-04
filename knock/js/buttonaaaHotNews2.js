@@ -10,21 +10,16 @@ function popupOptions(){
    btn1.innerText = "Presentation";
    btn1.addEventListener("click", function(){
        //add here the action that you want
-       window.open("./Recursos externos/presentation/Kelvin17.pdf", "_blank", "noopener");
+       window.open("./Recursos externos/presentation/WowSports.pdf", "_blank", "noopener");
    });
    var btn2 = document.createElement("button");
-   btn2.innerText = "Kelvin17 Manual";
+   btn2.innerText = "Youtube Channel";
    btn2.addEventListener("click", function(){
        //add here the action that you want
-       window.open("./Recursos externos/manuals/Kelvin17-Manual.pdf", "_blank", "noopener");
+       window.open("https://www.youtube.com/@worldofwatersports/videos", "_blank", "noopener");
    });
 
-   var btn3 = document.createElement("button");
-   btn3.innerText = "Kelvin36 Manual";
-   btn3.addEventListener("click", function(){
-       //add here the action that you want
-       window.open("./Recursos externos/manuals/Kelvin36-Manual.pdf", "_blank", "noopener");
-   });
+   
 
    
    
@@ -32,7 +27,7 @@ function popupOptions(){
    // Append the button to the div
    popup.appendChild(btn1);
    popup.appendChild(btn2);
-   popup.appendChild(btn3);
+   
    
    
 

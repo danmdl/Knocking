@@ -8,11 +8,18 @@ function popupOptions(){
    popup.classList.add("popup");
    // Create the button element 
 
-   var btn0 = document.createElement("button");
-   btn0.innerText = "Presentation";
-   btn0.addEventListener("click", function(){
+   var btn1 = document.createElement("button");
+   btn1.innerText = "Presentation";
+   btn1.addEventListener("click", function(){
        //add here the action that you want
-       window.open("./Recursos externos/presentation/Oboi.pdf", "_blank", "noopener");
+       window.open("./Recursos externos/presentation/KlockitGolf.pdf", "_blank", "noopener");
+   });
+
+   var btn2 = document.createElement("button");
+   btn2.innerText = "How-to";
+   btn2.addEventListener("click", function(){
+       //add here the action that you want
+       window.open("https://klockitgolf.com/pages/how-to", "_blank", "noopener");
    });
 
    
@@ -21,7 +28,8 @@ function popupOptions(){
 
   
    // Append the button to the div
-   popup.appendChild(btn0);
+   popup.appendChild(btn1);
+   popup.appendChild(btn2);
    
    
   

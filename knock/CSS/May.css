@@ -1,5 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
         
+:root {
+    --black:#000000;
+    --white: #FFFFFF;
+    --very-light-pink: #C7C7C7;
+    --text-input-field: #F7F7F7;
+    --dark: #232830;
+    --hospital-green: #ACD9B2;
+    --shop-yellow:#f1ec40;
+    --small: 14px;
+    --medium: 16px;
+    --large: 18px;
+}
+
+
         * {
             margin: 0px;
             padding: 0px;
@@ -9,6 +23,12 @@
         body {
             background: black;
             font-family: 'Poppins', sans-serif;
+        }
+
+        .blur {
+            filter: blur(5px);
+            transition: filter 0.5s ease-in-out;
+            
         }
         
 
@@ -22,24 +42,122 @@
             
         }
 
-        .brands-card, .extras-container {
+        nav{
+            display: flex;
+            width: 100%;
+            height: 60px;
+            justify-content: space-between;
+            padding:10px;
+            box-sizing: border-box;
+            border-bottom: 1px solid var(--very-light-pink);
+            background: rgb(19, 25, 33) ;
+            z-index: 10;
+            
+        }
+
+
+        .navbar-left ul {
+            list-style: none;
+            padding: 0;
+            margin: 0px;
+            display: flex;
+            align-items: center;
+            box-sizing: border-box;
+            font-weight: bolder;
+           
+            
+        }
+        
+        .navbar-left a {
+            
+            box-sizing: border-box; /* add this line */
+        }
+        
+        
+        
+        .navbar-left {
+            display: flex;
+            text-decoration: none;
+            align-items: center;
+        }
+        
+        .navbar-left ul {
+            
+            margin-left: 30px;
+            font-size: 18px;
+        }
+
+        .navbar-left div {
+            display: flex;
+            align-items: center;
+        }
+        
+        .navbar-left ul li a {
+            text-decoration: none;
+            color: var(--very-light-pink);
+            border: 1px solid rgba(255, 255, 255, 0);
+            padding: 10px;
+            border-radius: 8px;
+            
+            text-shadow: 0.5px 0.5px 0px black;
+        }
+        
+        .navbar-left a:hover {
+            text-decoration: none;
+            color: var(--shop-yellow);
+            border: 1px solid var(--shop-yellow);
+            border-radius: 8px;
+            font-weight: bolder;
+            text-shadow: 1px 1px 2px black;
+            box-sizing: border-box;
+            transition: all 0.2s ease-in-out;
+        }
+
+        #knocking-Logo {
+            width: 100px;
+            height: 23px;
+            object-fit:cover;
+            background: white;
+            padding: 5px;
+            border-radius: 30px;
+            object-fit:contain;
+            justify-self: center;
+            box-shadow: 1px 1px 20px rgb(32,123,237);
+
+        }
+        
+        
+
+/** ---------------------------------* FIN NAV BAR * */
+
+        .brands-card, .panel {
             background:  rgb(16, 79, 156);
         }
 
+        .afterHeaderContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 10px;
+
+        }
+
         .afterHeader {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            padding: 30px;
+            background: rgb(16, 79, 156);
+            display: flex;
+            margin: 10px 5px 0px 5px;
+            height: 150px;
+            width: fit-content;
+            border-radius: 40px;
+            flex-direction: column;
+            align-items: center;
             
         }
 
         #night {
             width: 100px;
             height: 40px;
-            object-fit:contain;
-            justify-self: start;
             align-self: center;
-            grid-column: 1/2;
             background: white;
             margin-left:30px;
             border-radius: 30px;
@@ -53,33 +171,32 @@
             transform: translate(3px, 3px);
         }
 
-        .afterHeader a {
-            width: 200px;
-            height: 45px;
-            object-fit:contain;
+        .extrasnav {
+            width: 100px;
+            height: 40px;
+            align-self: center;
             background: white;
-            padding: 10px;
+            margin-left:30px;
             border-radius: 30px;
-            object-fit:contain;
-            justify-self: center;
+            cursor:pointer;
             box-shadow: 1px 1px 20px rgb(32,123,237);
-
+            
         }
 
-        .afterHeader a:active {
+        .extrasnav:active {
             box-shadow: 0px 0px 0px black;
             transform: translate(3px, 3px);
         }
 
+        
 /* ------------------------------------- */
         .main-container {
             height: 100vh;
+            width: auto;
             color: white;
-            display: grid;
-            grid-template-columns: 1fr 0.5fr;
-            grid-gap: 10px;
-            margin-bottom: 30px;
-            
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
         }
 
 /* -------------------MID------------------------- */
@@ -90,9 +207,8 @@
             align-items: center;
             justify-items: center;
             justify-content: center;
-            border-radius: 40px;
             box-shadow: 1px 1px 5px;
-            margin-left: 5px;
+            
             
             
         }
@@ -218,9 +334,9 @@
         }
 
         .brands-card img {
-            width: 120px;
+            width: 100px;
             height: 45px;
-            object-fit:contain;
+            object-fit: contain;
             padding: 5px;
             border: solid 1px rgb(255, 255, 255);
             border-radius: 15px;
@@ -245,19 +361,50 @@
         
 
 /* ----------------Right------------------------- */        
+        .panel{
+            
 
-        .extras-container {
-            grid-column: 2/3;
-            display: flex;
-            flex-direction: column;
-            justify-items: center;
+            width: 600px;
+            height: auto;
+            position:fixed;
+            overflow: hidden;
+            right:0px;
+            top:232px;
             border-radius: 40px;
             box-shadow: 1px 1px 5px;
+            border: 1px solid #000000;
+            transform: translateX(100%);
+            transition: transform 0.5s ease-in-out;
+            z-index: 9999;
+            
+        }
+
+        .extras-container{
+            display: flex;
+            flex-direction: column;
             align-items: center;
-            margin-right: 5px;
-            
-            
-            
+        }
+
+        .deploy {
+        transform: translateX(0%);
+        }
+
+        .close img {
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            padding: 4px;
+            margin-top: 20px;;
+            margin-left: 25px;
+            cursor: pointer;
+            border: 1px solid rgb(182, 182, 182,0.3);
+        }
+
+
+        #hot-news-brands{
+            margin-bottom: 5px;
         }
 
         #hot-news-brands img{
@@ -293,6 +440,14 @@
             flex-direction: row;
         }
 
+        #hot-news-brands li{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+
+        }
+
 
         .extraList {
             display: flex;
@@ -313,7 +468,7 @@
 
        
 
-        .extras-container h1{
+        .panel h1{
             font-size: 45px;
             
         }
@@ -325,11 +480,6 @@
             transition: transform 1s ease-in-out;
         }
 
-        h1:hover {
-            transform: scale(1.05); 
-            text-shadow: 3px 3px 3px black;
-        }
-
         #long-brand {
             
             color: white;
@@ -338,11 +488,10 @@
         @media (max-width: 1560px) {
             #long-brand #span2 {
                 display: none;
-              }
-              #long-brand #span1::before {
+            }
+            #long-brand #span1::before {
                 content: "Magic Carpet";
-              }
-             
+            }
         }
         
 
@@ -357,10 +506,9 @@
 
 /*------- ID is for title */
         #faqs {
-            
             text-align: center;
-            margin-bottom: 10px;
-            
+            margin-bottom: 0px;
+            color: white;            
         }
 
         .faqs {
@@ -476,6 +624,7 @@
             display: flex;
             flex-direction: column;
             margin-top: 10px;
+            margin-bottom: 40px;
         }
 
 /*------- ID is for title */
