@@ -1,9 +1,10 @@
 const buttonNight = document.getElementById("night");
 
 const about = document.querySelector(".about");
-const mid = document.querySelector(".brands-card");
-const extra = document.querySelector(".extras-container");
-const knockingLogo = document.querySelector("knocking-Logo");
+const mid = document.querySelector(".change-colorA");
+const extra = document.querySelector(".change-colorB");
+const knockingLogo = document.querySelector("#knocking-Logo");
+const afterHeader = document.querySelector(".afterHeaderContainer")
 
 const colorsA = ["rgb(32, 123, 237)", "rgb(15, 53, 100)"];
 let currentColorA = 0;

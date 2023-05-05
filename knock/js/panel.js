@@ -2,7 +2,7 @@ const extrasNav = document.querySelector(".extrasnav");
 const panel = document.querySelector(".panel");
 const cross = document.querySelector(".cross-image");
 const afterHeaderContainer = document.querySelector(".afterHeaderContainer");
-const mainContrainer = document.querySelector(".main-container");
+const mainContrainer = document.querySelector(".brands-card");
 
 
 extrasNav.addEventListener("click", openPanel);

@@ -25,11 +25,14 @@
             font-family: 'Poppins', sans-serif;
         }
 
-        .blur {
-            filter: blur(5px);
-            transition: filter 0.5s ease-in-out;
-            
+        #all {
+            display: flex;
+            flex-direction: column;
+            padding: 0px;
+            margin: 0px;
         }
+
+        
         
 
         .about {
@@ -130,29 +133,87 @@
 
 /** ---------------------------------* FIN NAV BAR * */
 
-        .brands-card, .panel {
-            background:  rgb(16, 79, 156);
-        }
-
-        .afterHeaderContainer {
+               .afterHeaderContainer {
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            flex-direction: row;
             margin-bottom: 10px;
+            justify-content: center;
+            align-items: center;
+            
 
         }
 
         .afterHeader {
-            background: rgb(16, 79, 156);
             display: flex;
             margin: 10px 5px 0px 5px;
             height: 150px;
-            width: fit-content;
             border-radius: 40px;
-            flex-direction: column;
+            flex-direction: row;
             align-items: center;
+            margin-inline: 20px;
             
         }
+
+        .left-news{
+            color: white;
+            display: flex;
+            flex-direction: column;
+            background:rgb(16, 79, 156);
+            border-radius: 15px;
+            height: 140px;
+            width: 400px;
+            margin-inline: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .left-news h1 {        
+            margin-top: -20px;
+        }
+
+        .search-bar{
+            height: 30px;
+            width: 300px;
+            border: none;
+            box-sizing: border-box;
+            align-items: center;
+            background-color: var(--white);
+            border-radius: 40px 40px 40px 40px;
+            padding: 0px 4px 0px 16px;
+            margin-left: 0px;
+            /* flex: 1 1 1e-9px; */
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        .search-bar [type=text] {
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-left: 20px !important;
+        }
+
+
+        .hot-news {
+            background:rgb(16, 79, 156);
+            border-radius: 15px;
+            
+        }
+
+        .right-news {
+            color: white;
+            display: flex;
+            flex-direction: column;
+            background:rgb(16, 79, 156);
+            border-radius: 15px;
+            height: 140px;
+            width: 400px;
+            margin-inline: 20px;
+            align-items: center;
+    justify-content: center;
+        }
+
+        
 
         #night {
             width: 100px;
@@ -189,152 +250,25 @@
         }
 
         
-/* ------------------------------------- */
-        .main-container {
-            height: 100vh;
-            width: auto;
-            color: white;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-        }
-
 /* -------------------MID------------------------- */
-        .brands-card {
-            grid-column: 1/2;
-            display: grid;
-            grid-template-columns: auto;
-            align-items: center;
-            justify-items: center;
-            justify-content: center;
-            box-shadow: 1px 1px 5px;
-            
-            
-            
-        }
-
-        .brands-container {
-            
-            display: flex;
-            flex-direction: row;
-            width: 100%;
-            align-items: center;
-            justify-items: center;
-        }
-
-        .brands-column-1{
-            grid-column: 1/2;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin: 10px;
-            border-radius: 30px;
-            padding-bottom: 30px;
-            
-        }
-
-        .brands-column-2 {
-            grid-column: 2/3;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin: 10px;
-            border-radius: 30px;
-            padding-bottom: 30px;
-            
-        }
-
-        .brands-column-3 {
-            grid-column: 3/4;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin: 10px;
-            border-radius: 30px;
-            padding-bottom: 30px;
-            
-        }
-
-        .brands-column-4 {
-            grid-column: 4/5;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin: 10px;
-            border-radius: 30px;
-            padding-bottom: 30px;
-        }
-
-        .brands-column-5 {
-            grid-column: 5/6;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin: 10px;
-            border-radius: 30px;
-            padding-bottom: 30px;
-            
-        }
-
-        .brands-column-6 {
-            grid-column: 6/7;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin: 10px;
-            border-radius: 30px;
-            padding-bottom: 30px;
-            
-        }
-
-        .brands-column-7 {
-            grid-column: 7/8;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin: 10px;
-            border-radius: 30px;
-            padding-bottom: 30px;
-            
-        }
-
-        .brands-column-8 {
-            grid-column: 8/9;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin: 10px;
-            border-radius: 30px;
-            padding-bottom: 30px;
-            
-        }
-
-/* --------------------Opacitiy on brands and exceptions----------- */
-        .brands-column-8 div, .brands-column-8 p {
-            opacity: 0.5;
-        }
-
-
-
-        /*  
-        TODO: Remove comments to add opacity to the desired button */
-         #brand50, #p50
-         { opacity:1; } 
         
-                
-
-/* --------------------Opacitiy on brands and exceptions----------- */
-
-
-
-
+        .brands-card {
+            height: 100vh;
+            width: 100%;            
+            box-shadow: 1px 1px 5px;
+            align-items: center;
+            box-sizing: border-box;
+            background: rgb(16, 79, 156);
+            color: white;
+            overflow: hidden;
+        }
         .brands-card h1 {
             font-size: 45px;
                         
         }
 
         .brands-card img {
-            width: 100px;
+            width: 110px;
             height: 45px;
             object-fit: contain;
             padding: 5px;
@@ -356,6 +290,51 @@
             transform: translate(3px, 3px);
         }
 
+               
+        .brands-buttons{
+            
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+            /* repeat (2, 1fr) es = a 1fr 1fr */
+            place-content: center;
+            padding: 25px;
+            justify-items: center;
+            
+          }
+
+          .brands-buttons ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+          }
+
+
+/* --------------------Opacitiy on brands and exceptions----------- */
+        .brands-column-8 div, .brands-column-8 p {
+            opacity: 0.5;
+        }
+
+
+
+        /*  
+        TODO: Remove comments to add opacity to the desired button */
+         #brand50, #p50
+         { opacity:1; } 
+        
+                
+
+/* --------------------Opacitiy on brands and exceptions----------- */
+
+
+
+
+        
+
         
 
         
@@ -376,7 +355,13 @@
             transform: translateX(100%);
             transition: transform 0.5s ease-in-out;
             z-index: 9999;
+            background:  rgb(16, 79, 156);
             
+        }
+
+        .panel h1{
+            font-size: 45px;
+            color: white;
         }
 
         .extras-container{
@@ -386,22 +371,19 @@
         }
 
         .deploy {
-        transform: translateX(0%);
+        transform: translateX(-5%);
         }
 
         .close img {
             position: absolute;
-            background-color: white;
-            border-radius: 50%;
-            width: 20px;
-            height: 20px;
-            padding: 4px;
+            width: 30px;
+            height: 30px;
             margin-top: 20px;;
             margin-left: 25px;
             cursor: pointer;
-            border: 1px solid rgb(182, 182, 182,0.3);
         }
 
+        
 
         #hot-news-brands{
             margin-bottom: 5px;
@@ -455,8 +437,6 @@
             width: 100%;
             align-items: center;
             justify-items: center;
-            margin-top: 20px;
-            
             
         }
 
@@ -468,10 +448,7 @@
 
        
 
-        .panel h1{
-            font-size: 45px;
-            
-        }
+        
 
         h1 {
             text-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
@@ -500,7 +477,7 @@
         .faqs-container {
             display: flex;
             flex-direction: column;
-            margin-top: 10px;
+            
             
         }
 
@@ -508,7 +485,8 @@
         #faqs {
             text-align: center;
             margin-bottom: 0px;
-            color: white;            
+            color: white;   
+            user-select: none;         
         }
 
         .faqs {
@@ -624,7 +602,7 @@
             display: flex;
             flex-direction: column;
             margin-top: 10px;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
         }
 
 /*------- ID is for title */
@@ -694,7 +672,8 @@
 }
 
 .blur {
-    filter: blur(5px) brightness(0.5);;
+    filter: blur(5px) brightness(0.5);
+    transition: filter 0.5s ease-in-out;
     
 }
 
